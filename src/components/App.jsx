@@ -1,16 +1,15 @@
-export const App = () => {
+import React from 'react';
+import Profile from './profile/Profile';
+import user from './profile/user.json'
+
+
+export default function App() {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
+    <div>
+      <Profile
+        followers={user.stats.followers}
+        views={user.stats.views}
+        likes={user.stats.likes} />
     </div>
   );
-};
+}
