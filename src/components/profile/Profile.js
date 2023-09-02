@@ -1,44 +1,53 @@
+import React from 'react'; 
 import PropTypes from 'prop-types';
-import user from './user.json';
 
 const Profile = ({
+    username,
+    tag,
+    location,
+    avatar,
   followers,
   views,
-  likes,
+    likes,
 }) => {
-  return (
-    <div class="profile">
-      <div class="description">
-        <img
-          src={user.avatar}
-          alt="User avatar"
-          class="avatar"
-          width="480"
-        />
-        <p class="name">{user.username}</p>
-        <p class="tag">{user.tag}</p>
-        <p class="location">{user.location}</p>
-      </div>
+    return (
+        <div class="profile">
+  <div class="description">
+    <img
+      src={avatar}
+      alt="User avatar"
+      class="avatar"
+      width="480"
+    />
+    <p class="name">{username}</p>
+    <p class="tag">{tag}</p>
+    <p class="location">{location}</p>
+  </div>
 
-      <ul class="stats">
-        <li>
-          <span class="label">Followers</span>
-          <span class="quantity">{followers}</span>
-        </li>
-        <li>
-          <span class="label">Views</span>
-          <span class="quantity">{views}</span>
-        </li>
-        <li>
-          <span class="label">Likes</span>
-          <span class="quantity">{likes}</span>
-        </li>
-      </ul>
-    </div>
-  )
+  <ul class="stats">
+    <li>
+      <span class="label">Followers</span>
+      <span class="quantity">{followers}</span>
+    </li>
+    <li>
+      <span class="label">Views</span>
+      <span class="quantity">{views}</span>
+    </li>
+    <li>
+      <span class="label">Likes</span>
+      <span class="quantity">{likes}</span>
+    </li>
+  </ul>
+</div>
+    )
 }
 
+
 Profile.propTypes = {
+  avatar: PropTypes.string.isRequired,
+  username: PropTypes.string.isRequired,
+  tag: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
   followers: PropTypes.number.isRequired,
   views: PropTypes.number.isRequired,
   likes: PropTypes.number.isRequired,
