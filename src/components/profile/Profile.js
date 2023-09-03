@@ -1,47 +1,51 @@
-import React from 'react'; 
+import React from 'react';
 import PropTypes from 'prop-types';
+import {
+  Container,
+  Avatar,
+  UserName,
+  Tag,
+  Stats,
+  StatsLi,
+  Label,
+  Quantity,
+} from './Profile.styled';
 
 const Profile = ({
-    username,
-    tag,
-    location,
-    avatar,
+  username,
+  tag,
+  location,
+  avatar,
   followers,
   views,
-    likes,
+  likes,
 }) => {
-    return (
-        <div className="profile">
-  <div className="description">
-    <img
-      src={avatar}
-      alt="User avatar"
-      className="avatar"
-      width="480"
-    />
-    <p className="name">{username}</p>
-    <p className="tag">{tag}</p>
-    <p className="location">{location}</p>
-  </div>
+  return (
+    <Container>
+      <div className="description">
+        <Avatar src={avatar} alt="User avatar" width="280" />
+        <UserName>{username}</UserName>
+        <Tag>{tag}</Tag>
+        <Tag>{location}</Tag>
+      </div>
 
-  <ul className="stats">
-    <li>
-      <span className="label">Followers</span>
-      <span className="quantity">{followers}</span>
-    </li>
-    <li>
-      <span className="label">Views</span>
-      <span className="quantity">{views}</span>
-    </li>
-    <li>
-      <span className="label">Likes</span>
-      <span className="quantity">{likes}</span>
-    </li>
-  </ul>
-</div>
-    )
-}
-
+      <Stats>
+        <StatsLi>
+          <Label>Followers</Label>
+          <Quantity>{followers}</Quantity>
+        </StatsLi>
+        <StatsLi>
+          <Label>Views</Label>
+          <Quantity>{views}</Quantity>
+        </StatsLi>
+        <StatsLi>
+          <Label>Likes</Label>
+          <Quantity>{likes}</Quantity>
+        </StatsLi>
+      </Stats>
+    </Container>
+  );
+};
 
 Profile.propTypes = {
   avatar: PropTypes.string.isRequired,
