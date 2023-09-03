@@ -1,7 +1,9 @@
 import React from 'react';
-import Profile from 'components/profile/Profile';
+import Profile from './profile/Profile';
 import user from '../user.json';
-
+import StatisticsList from './statistics/StatisticsList';
+import Section from './statistics/Section';
+import data from '../data.json';
 
 export default function App() {
   return (
@@ -15,6 +17,12 @@ export default function App() {
         views={user.stats.views}
         likes={user.stats.likes}
       />
+      <section className="statistics">
+        <Section>
+          <StatisticsList items={data} />
+        </Section>
+        
+      </section>
     </div>
   );
 }
