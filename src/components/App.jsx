@@ -4,11 +4,15 @@ import user from '../user.json';
 import StatisticsList from './statistics/StatisticsList';
 import Section from './statistics/Section';
 import data from '../data.json';
+import FriendList from './friendlist/FriendList';
+import friends from '../friends.json';
+import TransactionHistory from './transactions/TransactionHistory';
+import transactions from '../transactions.json';
 
 export default function App() {
   return (
     <div>
-<Profile
+      <Profile
         username={user.username}
         tag={user.tag}
         location={user.location}
@@ -21,10 +25,9 @@ export default function App() {
         <Section>
           <StatisticsList items={data} />
         </Section>
-        
       </section>
+      <FriendList friends={friends} />;
+      <TransactionHistory items={transactions} />;
     </div>
   );
 }
-
-
