@@ -1,13 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { TableRow, TableData } from './Transaction.styled';
 
-const Transaction = ({ type, amount, currency }) => {
+const Transaction = ({ type, amount, currency, isEven }) => {
   return (
-    <tr>
-      <td>{type}</td>
-      <td>{amount}</td>
-      <td>{currency}</td>
-    </tr>
+    <TableRow>
+      <TableData>{type}</TableData>
+      <TableData>{amount}</TableData>
+      <TableData>{currency}</TableData>
+    </TableRow>
   );
 };
 Transaction.propTypes = {
