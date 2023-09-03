@@ -4,9 +4,9 @@ import { StatList, Item } from './Statistics.styled';
 
 function StatisticsList({ items }) {
   return (
-    <StatList className="stat-list">
+    <StatList>
       {items.map(item => (
-        <Item className="item" key={item.id}>
+        <Item key={item.id}>
           <Statistics label={item.label} percentage={item.percentage} />
         </Item>
       ))}

@@ -6,7 +6,7 @@ function FriendList({ friends }) {
   return (
     <ListOfFriends>
       {friends.map(friend => (
-        <li className="item" key={friend.id}>
+        <li key={friend.id}>
           <FriendListItem
             avatar={friend.avatar}
             friendname={friend.name}

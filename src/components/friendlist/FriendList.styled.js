@@ -14,15 +14,15 @@ export const Container = styled.div`
 export const OnlineStatus = styled.span`
   width: 12px;
   height: 12px;
-  background-color: green; /* Зелений колір */
-  border-radius: 50%; /* Округлимо кружечок */
-  margin-right: 5px; /* Відстань від аватарки */
+  background-color: green;
+  border-radius: 50%;
+  margin-right: 5px;
 `;
 export const OfflineStatus = styled.span`
   width: 12px;
   height: 12px;
-  background-color: red; /* Червоний колір */
-  border-radius: 50%; /* Округлимо кружечок */
+  background-color: red;
+  border-radius: 50%;
 `;
 export const ListOfFriends = styled.ul`
   list-style: none;

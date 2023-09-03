@@ -22,7 +22,7 @@ const Profile = ({
 }) => {
   return (
     <Container>
-      <div className="description">
+      <div>
         <Avatar src={avatar} alt="User avatar" width="280" />
         <UserName>{username}</UserName>
         <Tag>{tag}</Tag>
