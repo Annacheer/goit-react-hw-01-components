@@ -1,17 +1,15 @@
-import React from 'react'; 
+import React from 'react';
 import PropTypes from 'prop-types';
+import { Label, Percentage } from './Statistics.styled';
 
-const Statistics = ({
-    label,
-    percentage,
-}) => {
-    return (  
+const Statistics = ({ label, percentage }) => {
+  return (
     <div>
-            <span className="label">{label}</span>
-            <span className="percentage">{percentage}</span>
+      <Label className="label">{label}</Label>
+      <Percentage className="percentage">{percentage}%</Percentage>
     </div>
-    )
-}
+  );
+};
 
 Statistics.propTypes = {
   label: PropTypes.string.isRequired,
@@ -19,4 +17,3 @@ Statistics.propTypes = {
 };
 
 export default Statistics;
-
